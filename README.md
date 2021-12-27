@@ -13,3 +13,12 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+## What we learned
+   Imitating the blockchain environment to test
+   Build a script to run our contract
+1. Using hardhat
+1. storing data in blockchain
+We,
+1. Called our wave function.
+2. Changed the state variable.
+3. Read the new value of the variable.
