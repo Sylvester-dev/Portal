@@ -11,14 +11,15 @@ async function main() {
 
   let waveCount;
   waveCount = await portal.getTotalWaves(); //first we get total waves
-  let waveTxt = await portal.wave();   //then we wave
+  let waveTxt = await portal.wave("First Message!!");   //then we wave
   await waveTxt.wait();
   waveCount = await portal.getTotalWaves(); //and again get total waves
 
   //to let others greet
-  waveTxt = await portal.connect(randomPerson).wave();  
+  waveTxt = await portal.connect(randomPerson).wave("Anothwe Message!!");  
   await waveTxt.wait();
-  waveCount = await portal.getTotalWaves();
+  let allwaveCount = await portal.getAllWaves();
+  console.log(allwaveCount);
 }
 
 main()
